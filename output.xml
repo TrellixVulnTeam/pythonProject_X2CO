@@ -1,0 +1,1099 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200923 12:44:42.458" rpa="false">
+<suite id="s1" name="TestCases" source="C:\Users\Shriya\PycharmProjects\pythonProject\TestCases">
+<suite id="s1-s1" name="Login allInvalid" source="C:\Users\Shriya\PycharmProjects\pythonProject\TestCases\Login_allInvalid.robot">
+<kw name="Open Checkealos browser" library="login_resources" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${Login Url}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20200923 12:44:42.690" level="INFO">Opening browser 'chrome' to base url 'http://staging1.checkealos.com/'.</msg>
+<status status="PASS" starttime="20200923 12:44:42.690" endtime="20200923 12:44:53.282"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200923 12:44:53.282" endtime="20200923 12:44:55.412"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@class="sign-in"]</arg>
+</arguments>
+<msg timestamp="20200923 12:44:55.413" level="INFO">Clicking element 'xpath://a[@class="sign-in"]'.</msg>
+<status status="PASS" starttime="20200923 12:44:55.413" endtime="20200923 12:44:55.471"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:44:58.472" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:44:55.472" endtime="20200923 12:44:58.472"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:44:42.690" endtime="20200923 12:44:58.473"></status>
+</kw>
+<test id="s1-s1-t1" name="TC_01_Verify Valid_Email_Empty_Password">
+<kw name="Open login Page" library="login_resources" type="setup">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@class="sign-in"]</arg>
+</arguments>
+<msg timestamp="20200923 12:44:58.478" level="INFO">Clicking element 'xpath://a[@class="sign-in"]'.</msg>
+<status status="PASS" starttime="20200923 12:44:58.478" endtime="20200923 12:44:58.519"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:45:01.522" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:44:58.520" endtime="20200923 12:45:01.522"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id:user_email</arg>
+</arguments>
+<msg timestamp="20200923 12:45:01.545" level="INFO">Element 'id:user_email' is displayed.</msg>
+<status status="PASS" starttime="20200923 12:45:01.522" endtime="20200923 12:45:01.545"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>id:user_email</arg>
+</arguments>
+<status status="PASS" starttime="20200923 12:45:01.546" endtime="20200923 12:45:01.598"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id:user_password</arg>
+</arguments>
+<msg timestamp="20200923 12:45:01.623" level="INFO">Element 'id:user_password' is displayed.</msg>
+<status status="PASS" starttime="20200923 12:45:01.598" endtime="20200923 12:45:01.623"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>id:user_password</arg>
+</arguments>
+<status status="PASS" starttime="20200923 12:45:01.623" endtime="20200923 12:45:01.644"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:44:58.478" endtime="20200923 12:45:01.644"></status>
+</kw>
+<kw name="InValid Login">
+<arguments>
+<arg>vickyrocks86@gmail.com</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<kw name="Input Email" library="login_resources">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:user_email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200923 12:45:01.646" level="INFO">Typing text 'vickyrocks86@gmail.com' into text field 'id:user_email'.</msg>
+<status status="PASS" starttime="20200923 12:45:01.645" endtime="20200923 12:45:01.737"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:01.645" endtime="20200923 12:45:01.737"></status>
+</kw>
+<kw name="Input Password" library="login_resources">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:user_password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200923 12:45:01.738" level="INFO">Typing text '' into text field 'id:user_password'.</msg>
+<status status="PASS" starttime="20200923 12:45:01.738" endtime="20200923 12:45:01.808"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:01.738" endtime="20200923 12:45:01.808"></status>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@value="Sign In"]</arg>
+</arguments>
+<msg timestamp="20200923 12:45:01.810" level="INFO">Clicking element 'xpath://input[@value="Sign In"]'.</msg>
+<status status="PASS" starttime="20200923 12:45:01.809" endtime="20200923 12:45:03.877"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:45:06.878" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:45:03.877" endtime="20200923 12:45:06.878"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:01.809" endtime="20200923 12:45:06.878"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:45:09.878" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:45:06.878" endtime="20200923 12:45:09.878"></status>
+</kw>
+<kw name="Error message should be visible" library="login_resources">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Invalid email or password</arg>
+</arguments>
+<msg timestamp="20200923 12:45:09.893" level="INFO">Current page contains text 'Invalid email or password'.</msg>
+<status status="PASS" starttime="20200923 12:45:09.878" endtime="20200923 12:45:09.893"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:09.878" endtime="20200923 12:45:09.893"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:01.645" endtime="20200923 12:45:09.893"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:44:58.474" endtime="20200923 12:45:09.893" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="TC_02_Verify Valid_Email_Invalid_password">
+<kw name="Open login Page" library="login_resources" type="setup">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@class="sign-in"]</arg>
+</arguments>
+<msg timestamp="20200923 12:45:09.910" level="INFO">Clicking element 'xpath://a[@class="sign-in"]'.</msg>
+<status status="PASS" starttime="20200923 12:45:09.909" endtime="20200923 12:45:09.988"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:45:12.989" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:45:09.988" endtime="20200923 12:45:12.989"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id:user_email</arg>
+</arguments>
+<msg timestamp="20200923 12:45:13.028" level="INFO">Element 'id:user_email' is displayed.</msg>
+<status status="PASS" starttime="20200923 12:45:12.989" endtime="20200923 12:45:13.028"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>id:user_email</arg>
+</arguments>
+<status status="PASS" starttime="20200923 12:45:13.028" endtime="20200923 12:45:13.051"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id:user_password</arg>
+</arguments>
+<msg timestamp="20200923 12:45:13.072" level="INFO">Element 'id:user_password' is displayed.</msg>
+<status status="PASS" starttime="20200923 12:45:13.051" endtime="20200923 12:45:13.072"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>id:user_password</arg>
+</arguments>
+<status status="PASS" starttime="20200923 12:45:13.073" endtime="20200923 12:45:13.093"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:09.908" endtime="20200923 12:45:13.093"></status>
+</kw>
+<kw name="InValid Login">
+<arguments>
+<arg>admin@checkealos.com</arg>
+<arg>xyz</arg>
+</arguments>
+<kw name="Input Email" library="login_resources">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:user_email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200923 12:45:13.094" level="INFO">Typing text 'admin@checkealos.com' into text field 'id:user_email'.</msg>
+<status status="PASS" starttime="20200923 12:45:13.094" endtime="20200923 12:45:13.167"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:13.094" endtime="20200923 12:45:13.167"></status>
+</kw>
+<kw name="Input Password" library="login_resources">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:user_password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200923 12:45:13.168" level="INFO">Typing text 'xyz' into text field 'id:user_password'.</msg>
+<status status="PASS" starttime="20200923 12:45:13.168" endtime="20200923 12:45:13.232"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:13.167" endtime="20200923 12:45:13.233"></status>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@value="Sign In"]</arg>
+</arguments>
+<msg timestamp="20200923 12:45:13.233" level="INFO">Clicking element 'xpath://input[@value="Sign In"]'.</msg>
+<status status="PASS" starttime="20200923 12:45:13.233" endtime="20200923 12:45:15.344"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:45:18.345" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:45:15.344" endtime="20200923 12:45:18.345"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:13.233" endtime="20200923 12:45:18.345"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:45:21.347" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:45:18.345" endtime="20200923 12:45:21.347"></status>
+</kw>
+<kw name="Error message should be visible" library="login_resources">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Invalid email or password</arg>
+</arguments>
+<msg timestamp="20200923 12:45:21.362" level="INFO">Current page contains text 'Invalid email or password'.</msg>
+<status status="PASS" starttime="20200923 12:45:21.348" endtime="20200923 12:45:21.362"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:21.347" endtime="20200923 12:45:21.362"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:13.093" endtime="20200923 12:45:21.362"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:09.902" endtime="20200923 12:45:21.363" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="TC_03_Verify Invalid_email_invalid_password">
+<kw name="Open login Page" library="login_resources" type="setup">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@class="sign-in"]</arg>
+</arguments>
+<msg timestamp="20200923 12:45:21.365" level="INFO">Clicking element 'xpath://a[@class="sign-in"]'.</msg>
+<status status="PASS" starttime="20200923 12:45:21.364" endtime="20200923 12:45:21.427"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:45:24.430" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:45:21.427" endtime="20200923 12:45:24.430"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id:user_email</arg>
+</arguments>
+<msg timestamp="20200923 12:45:24.452" level="INFO">Element 'id:user_email' is displayed.</msg>
+<status status="PASS" starttime="20200923 12:45:24.430" endtime="20200923 12:45:24.452"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>id:user_email</arg>
+</arguments>
+<status status="PASS" starttime="20200923 12:45:24.452" endtime="20200923 12:45:24.471"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id:user_password</arg>
+</arguments>
+<msg timestamp="20200923 12:45:24.492" level="INFO">Element 'id:user_password' is displayed.</msg>
+<status status="PASS" starttime="20200923 12:45:24.471" endtime="20200923 12:45:24.492"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>id:user_password</arg>
+</arguments>
+<status status="PASS" starttime="20200923 12:45:24.492" endtime="20200923 12:45:24.511"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:21.364" endtime="20200923 12:45:24.511"></status>
+</kw>
+<kw name="InValid Login">
+<arguments>
+<arg>admin1@checkealos.com</arg>
+<arg>xyz</arg>
+</arguments>
+<kw name="Input Email" library="login_resources">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:user_email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200923 12:45:24.512" level="INFO">Typing text 'admin1@checkealos.com' into text field 'id:user_email'.</msg>
+<status status="PASS" starttime="20200923 12:45:24.512" endtime="20200923 12:45:24.596"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:24.512" endtime="20200923 12:45:24.596"></status>
+</kw>
+<kw name="Input Password" library="login_resources">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:user_password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200923 12:45:24.597" level="INFO">Typing text 'xyz' into text field 'id:user_password'.</msg>
+<status status="PASS" starttime="20200923 12:45:24.597" endtime="20200923 12:45:24.663"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:24.596" endtime="20200923 12:45:24.663"></status>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@value="Sign In"]</arg>
+</arguments>
+<msg timestamp="20200923 12:45:24.664" level="INFO">Clicking element 'xpath://input[@value="Sign In"]'.</msg>
+<status status="PASS" starttime="20200923 12:45:24.664" endtime="20200923 12:45:26.808"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:45:29.809" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:45:26.808" endtime="20200923 12:45:29.809"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:24.664" endtime="20200923 12:45:29.809"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:45:32.820" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:45:29.809" endtime="20200923 12:45:32.820"></status>
+</kw>
+<kw name="Error message should be visible" library="login_resources">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Invalid email or password</arg>
+</arguments>
+<msg timestamp="20200923 12:45:32.835" level="INFO">Current page contains text 'Invalid email or password'.</msg>
+<status status="PASS" starttime="20200923 12:45:32.820" endtime="20200923 12:45:32.835"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:32.820" endtime="20200923 12:45:32.835"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:24.512" endtime="20200923 12:45:32.835"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:21.364" endtime="20200923 12:45:32.836" critical="yes"></status>
+</test>
+<test id="s1-s1-t4" name="TC_04_Verify Empty_email_empty_password">
+<kw name="Open login Page" library="login_resources" type="setup">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@class="sign-in"]</arg>
+</arguments>
+<msg timestamp="20200923 12:45:32.838" level="INFO">Clicking element 'xpath://a[@class="sign-in"]'.</msg>
+<status status="PASS" starttime="20200923 12:45:32.838" endtime="20200923 12:45:32.894"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:45:35.896" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:45:32.894" endtime="20200923 12:45:35.896"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id:user_email</arg>
+</arguments>
+<msg timestamp="20200923 12:45:35.927" level="INFO">Element 'id:user_email' is displayed.</msg>
+<status status="PASS" starttime="20200923 12:45:35.897" endtime="20200923 12:45:35.927"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>id:user_email</arg>
+</arguments>
+<status status="PASS" starttime="20200923 12:45:35.928" endtime="20200923 12:45:35.948"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id:user_password</arg>
+</arguments>
+<msg timestamp="20200923 12:45:35.963" level="INFO">Element 'id:user_password' is displayed.</msg>
+<status status="PASS" starttime="20200923 12:45:35.948" endtime="20200923 12:45:35.963"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>id:user_password</arg>
+</arguments>
+<status status="PASS" starttime="20200923 12:45:35.963" endtime="20200923 12:45:35.979"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:32.838" endtime="20200923 12:45:35.979"></status>
+</kw>
+<kw name="InValid Login">
+<arguments>
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<kw name="Input Email" library="login_resources">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:user_email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200923 12:45:35.980" level="INFO">Typing text '' into text field 'id:user_email'.</msg>
+<status status="PASS" starttime="20200923 12:45:35.980" endtime="20200923 12:45:36.035"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:35.980" endtime="20200923 12:45:36.036"></status>
+</kw>
+<kw name="Input Password" library="login_resources">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:user_password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200923 12:45:36.036" level="INFO">Typing text '' into text field 'id:user_password'.</msg>
+<status status="PASS" starttime="20200923 12:45:36.036" endtime="20200923 12:45:36.095"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:36.036" endtime="20200923 12:45:36.095"></status>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@value="Sign In"]</arg>
+</arguments>
+<msg timestamp="20200923 12:45:36.095" level="INFO">Clicking element 'xpath://input[@value="Sign In"]'.</msg>
+<status status="PASS" starttime="20200923 12:45:36.095" endtime="20200923 12:45:38.151"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:45:41.153" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:45:38.151" endtime="20200923 12:45:41.153"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:36.095" endtime="20200923 12:45:41.154"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:45:44.156" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:45:41.155" endtime="20200923 12:45:44.156"></status>
+</kw>
+<kw name="Error message should be visible" library="login_resources">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Invalid email or password</arg>
+</arguments>
+<msg timestamp="20200923 12:45:44.169" level="INFO">Current page contains text 'Invalid email or password'.</msg>
+<status status="PASS" starttime="20200923 12:45:44.156" endtime="20200923 12:45:44.169"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:44.156" endtime="20200923 12:45:44.169"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:35.979" endtime="20200923 12:45:44.169"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:32.837" endtime="20200923 12:45:44.170" critical="yes"></status>
+</test>
+<kw name="Close Browsers" library="login_resources" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200923 12:45:44.172" endtime="20200923 12:45:46.269"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:44.172" endtime="20200923 12:45:46.269"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:44:42.490" endtime="20200923 12:45:46.269"></status>
+</suite>
+<suite id="s1-s2" name="Login allValid" source="C:\Users\Shriya\PycharmProjects\pythonProject\TestCases\Login_allValid.robot">
+<kw name="Open Checkealos browser" library="login_resources" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${Login Url}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20200923 12:45:46.287" level="INFO">Opening browser 'chrome' to base url 'http://staging1.checkealos.com/'.</msg>
+<status status="PASS" starttime="20200923 12:45:46.287" endtime="20200923 12:45:59.316"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200923 12:45:59.316" endtime="20200923 12:46:01.445"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@class="sign-in"]</arg>
+</arguments>
+<msg timestamp="20200923 12:46:01.445" level="INFO">Clicking element 'xpath://a[@class="sign-in"]'.</msg>
+<status status="PASS" starttime="20200923 12:46:01.445" endtime="20200923 12:46:01.508"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:46:04.511" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:46:01.508" endtime="20200923 12:46:04.511"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:46.287" endtime="20200923 12:46:04.511"></status>
+</kw>
+<test id="s1-s2-t1" name="TC_05_Verify Valid_email_valid_adminpassword">
+<kw name="Open login Page" library="login_resources" type="setup">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@class="sign-in"]</arg>
+</arguments>
+<msg timestamp="20200923 12:46:04.512" level="INFO">Clicking element 'xpath://a[@class="sign-in"]'.</msg>
+<status status="PASS" starttime="20200923 12:46:04.512" endtime="20200923 12:46:04.575"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:46:07.577" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:46:04.575" endtime="20200923 12:46:07.577"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id:user_email</arg>
+</arguments>
+<msg timestamp="20200923 12:46:07.630" level="INFO">Element 'id:user_email' is displayed.</msg>
+<status status="PASS" starttime="20200923 12:46:07.578" endtime="20200923 12:46:07.630"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>id:user_email</arg>
+</arguments>
+<status status="PASS" starttime="20200923 12:46:07.631" endtime="20200923 12:46:07.650"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id:user_password</arg>
+</arguments>
+<msg timestamp="20200923 12:46:07.668" level="INFO">Element 'id:user_password' is displayed.</msg>
+<status status="PASS" starttime="20200923 12:46:07.650" endtime="20200923 12:46:07.668"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>id:user_password</arg>
+</arguments>
+<status status="PASS" starttime="20200923 12:46:07.668" endtime="20200923 12:46:07.687"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:46:04.512" endtime="20200923 12:46:07.687"></status>
+</kw>
+<kw name="Valid Login">
+<arguments>
+<arg>admin@checkealos.com</arg>
+<arg>password12#4</arg>
+</arguments>
+<kw name="Input Email" library="login_resources">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:user_email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200923 12:46:07.688" level="INFO">Typing text 'admin@checkealos.com' into text field 'id:user_email'.</msg>
+<status status="PASS" starttime="20200923 12:46:07.688" endtime="20200923 12:46:07.769"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:46:07.688" endtime="20200923 12:46:07.769"></status>
+</kw>
+<kw name="Input Password" library="login_resources">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:user_password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200923 12:46:07.770" level="INFO">Typing text 'password12#4' into text field 'id:user_password'.</msg>
+<status status="PASS" starttime="20200923 12:46:07.770" endtime="20200923 12:46:07.839"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:46:07.769" endtime="20200923 12:46:07.839"></status>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@value="Sign In"]</arg>
+</arguments>
+<msg timestamp="20200923 12:46:07.840" level="INFO">Clicking element 'xpath://input[@value="Sign In"]'.</msg>
+<status status="PASS" starttime="20200923 12:46:07.839" endtime="20200923 12:46:10.072"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:46:13.073" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:46:10.072" endtime="20200923 12:46:13.073"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:46:07.839" endtime="20200923 12:46:13.073"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:46:16.074" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:46:13.073" endtime="20200923 12:46:16.074"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:46:07.688" endtime="20200923 12:46:16.074"></status>
+</kw>
+<kw name="Click SignOut Button" library="login_resources" type="teardown">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@href="/users/sign_out"]</arg>
+</arguments>
+<msg timestamp="20200923 12:46:16.075" level="INFO">Clicking element 'xpath://a[@href="/users/sign_out"]'.</msg>
+<status status="PASS" starttime="20200923 12:46:16.075" endtime="20200923 12:46:18.048"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:46:16.074" endtime="20200923 12:46:18.048"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:46:04.511" endtime="20200923 12:46:18.049" critical="yes"></status>
+</test>
+<test id="s1-s2-t2" name="TC_06_Verify Valid_email_valid_testerpassword">
+<kw name="Open login Page" library="login_resources" type="setup">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@class="sign-in"]</arg>
+</arguments>
+<msg timestamp="20200923 12:46:18.051" level="INFO">Clicking element 'xpath://a[@class="sign-in"]'.</msg>
+<status status="PASS" starttime="20200923 12:46:18.051" endtime="20200923 12:46:18.094"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:46:21.096" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:46:18.095" endtime="20200923 12:46:21.096"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id:user_email</arg>
+</arguments>
+<msg timestamp="20200923 12:46:21.117" level="INFO">Element 'id:user_email' is displayed.</msg>
+<status status="PASS" starttime="20200923 12:46:21.096" endtime="20200923 12:46:21.117"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>id:user_email</arg>
+</arguments>
+<status status="PASS" starttime="20200923 12:46:21.117" endtime="20200923 12:46:21.136"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id:user_password</arg>
+</arguments>
+<msg timestamp="20200923 12:46:21.150" level="INFO">Element 'id:user_password' is displayed.</msg>
+<status status="PASS" starttime="20200923 12:46:21.136" endtime="20200923 12:46:21.150"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>id:user_password</arg>
+</arguments>
+<status status="PASS" starttime="20200923 12:46:21.150" endtime="20200923 12:46:21.169"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:46:18.050" endtime="20200923 12:46:21.169"></status>
+</kw>
+<kw name="Valid Login">
+<arguments>
+<arg>kamlesh.otari@intelliswift.co.in</arg>
+<arg>12345678</arg>
+</arguments>
+<kw name="Input Email" library="login_resources">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:user_email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200923 12:46:21.171" level="INFO">Typing text 'kamlesh.otari@intelliswift.co.in' into text field 'id:user_email'.</msg>
+<status status="PASS" starttime="20200923 12:46:21.170" endtime="20200923 12:46:21.253"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:46:21.170" endtime="20200923 12:46:21.254"></status>
+</kw>
+<kw name="Input Password" library="login_resources">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:user_password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200923 12:46:21.254" level="INFO">Typing text '12345678' into text field 'id:user_password'.</msg>
+<status status="PASS" starttime="20200923 12:46:21.254" endtime="20200923 12:46:21.321"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:46:21.254" endtime="20200923 12:46:21.321"></status>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@value="Sign In"]</arg>
+</arguments>
+<msg timestamp="20200923 12:46:21.322" level="INFO">Clicking element 'xpath://input[@value="Sign In"]'.</msg>
+<status status="PASS" starttime="20200923 12:46:21.321" endtime="20200923 12:46:24.092"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:46:27.094" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:46:24.092" endtime="20200923 12:46:27.094"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:46:21.321" endtime="20200923 12:46:27.094"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:46:30.095" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:46:27.094" endtime="20200923 12:46:30.095"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:46:21.170" endtime="20200923 12:46:30.095"></status>
+</kw>
+<kw name="Click SignOut Button" library="login_resources" type="teardown">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@href="/users/sign_out"]</arg>
+</arguments>
+<msg timestamp="20200923 12:46:30.096" level="INFO">Clicking element 'xpath://a[@href="/users/sign_out"]'.</msg>
+<status status="PASS" starttime="20200923 12:46:30.096" endtime="20200923 12:46:32.036"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:46:30.096" endtime="20200923 12:46:32.037"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:46:18.050" endtime="20200923 12:46:32.037" critical="yes"></status>
+</test>
+<test id="s1-s2-t3" name="TC_07_Verify Valid_email_valid_analystpassword">
+<kw name="Open login Page" library="login_resources" type="setup">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@class="sign-in"]</arg>
+</arguments>
+<msg timestamp="20200923 12:46:32.038" level="INFO">Clicking element 'xpath://a[@class="sign-in"]'.</msg>
+<status status="PASS" starttime="20200923 12:46:32.038" endtime="20200923 12:46:32.085"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:46:35.086" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:46:32.085" endtime="20200923 12:46:35.086"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id:user_email</arg>
+</arguments>
+<msg timestamp="20200923 12:46:35.129" level="INFO">Element 'id:user_email' is displayed.</msg>
+<status status="PASS" starttime="20200923 12:46:35.087" endtime="20200923 12:46:35.129"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>id:user_email</arg>
+</arguments>
+<status status="PASS" starttime="20200923 12:46:35.129" endtime="20200923 12:46:35.145"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id:user_password</arg>
+</arguments>
+<msg timestamp="20200923 12:46:35.161" level="INFO">Element 'id:user_password' is displayed.</msg>
+<status status="PASS" starttime="20200923 12:46:35.145" endtime="20200923 12:46:35.161"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>id:user_password</arg>
+</arguments>
+<status status="PASS" starttime="20200923 12:46:35.161" endtime="20200923 12:46:35.192"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:46:32.038" endtime="20200923 12:46:35.192"></status>
+</kw>
+<kw name="Valid Login">
+<arguments>
+<arg>kamlesh.analyst@mailcatch.com</arg>
+<arg>Dinesh@123</arg>
+</arguments>
+<kw name="Input Email" library="login_resources">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:user_email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200923 12:46:35.192" level="INFO">Typing text 'kamlesh.analyst@mailcatch.com' into text field 'id:user_email'.</msg>
+<status status="PASS" starttime="20200923 12:46:35.192" endtime="20200923 12:46:35.277"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:46:35.192" endtime="20200923 12:46:35.277"></status>
+</kw>
+<kw name="Input Password" library="login_resources">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:user_password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200923 12:46:35.278" level="INFO">Typing text 'Dinesh@123' into text field 'id:user_password'.</msg>
+<status status="PASS" starttime="20200923 12:46:35.278" endtime="20200923 12:46:35.345"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:46:35.277" endtime="20200923 12:46:35.345"></status>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@value="Sign In"]</arg>
+</arguments>
+<msg timestamp="20200923 12:46:35.346" level="INFO">Clicking element 'xpath://input[@value="Sign In"]'.</msg>
+<status status="PASS" starttime="20200923 12:46:35.346" endtime="20200923 12:46:37.947"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:46:40.948" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:46:37.947" endtime="20200923 12:46:40.948"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:46:35.346" endtime="20200923 12:46:40.949"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:46:43.951" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:46:40.949" endtime="20200923 12:46:43.951"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:46:35.192" endtime="20200923 12:46:43.952"></status>
+</kw>
+<kw name="Click SignOut Button" library="login_resources" type="teardown">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@href="/users/sign_out"]</arg>
+</arguments>
+<msg timestamp="20200923 12:46:43.956" level="INFO">Clicking element 'xpath://a[@href="/users/sign_out"]'.</msg>
+<status status="PASS" starttime="20200923 12:46:43.956" endtime="20200923 12:46:45.867"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:46:43.954" endtime="20200923 12:46:45.867"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:46:32.038" endtime="20200923 12:46:45.868" critical="yes"></status>
+</test>
+<kw name="Close Browsers" library="login_resources" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200923 12:46:45.869" endtime="20200923 12:46:47.957"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:46:45.869" endtime="20200923 12:46:47.958"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:45:46.269" endtime="20200923 12:46:47.959"></status>
+</suite>
+<suite id="s1-s3" name="Test1" source="C:\Users\Shriya\PycharmProjects\pythonProject\TestCases\test1.robot">
+<kw name="Open Checkealos browser" library="login_resources" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${Login Url}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20200923 12:46:47.989" level="INFO">Opening browser 'chrome' to base url 'http://staging1.checkealos.com/'.</msg>
+<status status="PASS" starttime="20200923 12:46:47.989" endtime="20200923 12:46:57.464"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200923 12:46:57.464" endtime="20200923 12:46:59.616"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@class="sign-in"]</arg>
+</arguments>
+<msg timestamp="20200923 12:46:59.617" level="INFO">Clicking element 'xpath://a[@class="sign-in"]'.</msg>
+<status status="PASS" starttime="20200923 12:46:59.617" endtime="20200923 12:46:59.673"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:47:02.681" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:46:59.673" endtime="20200923 12:47:02.681"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:46:47.989" endtime="20200923 12:47:02.681"></status>
+</kw>
+<test id="s1-s3-t1" name="TC_01_Verify Valid_Email_Empty_Password using">
+<kw name="Open login Page" library="login_resources" type="setup">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@class="sign-in"]</arg>
+</arguments>
+<msg timestamp="20200923 12:47:02.681" level="INFO">Clicking element 'xpath://a[@class="sign-in"]'.</msg>
+<status status="PASS" starttime="20200923 12:47:02.681" endtime="20200923 12:47:02.775"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200923 12:47:05.778" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200923 12:47:02.775" endtime="20200923 12:47:05.778"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id:user_email</arg>
+</arguments>
+<msg timestamp="20200923 12:47:05.800" level="INFO">Element 'id:user_email' is displayed.</msg>
+<status status="PASS" starttime="20200923 12:47:05.778" endtime="20200923 12:47:05.800"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>id:user_email</arg>
+</arguments>
+<status status="PASS" starttime="20200923 12:47:05.800" endtime="20200923 12:47:05.821"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id:user_password</arg>
+</arguments>
+<msg timestamp="20200923 12:47:05.842" level="INFO">Element 'id:user_password' is displayed.</msg>
+<status status="PASS" starttime="20200923 12:47:05.822" endtime="20200923 12:47:05.843"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>id:user_password</arg>
+</arguments>
+<status status="PASS" starttime="20200923 12:47:05.843" endtime="20200923 12:47:05.862"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:47:02.681" endtime="20200923 12:47:05.863"></status>
+</kw>
+<kw name="InValid Login">
+<arguments>
+<arg>${email} and</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200923 12:47:05.864" level="FAIL">Variable '${email}' not found.</msg>
+<status status="FAIL" starttime="20200923 12:47:05.863" endtime="20200923 12:47:05.864"></status>
+</kw>
+<status status="FAIL" starttime="20200923 12:47:02.681" endtime="20200923 12:47:05.864" critical="yes">Variable '${email}' not found.</status>
+</test>
+<kw name="Close Browsers" library="login_resources" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200923 12:47:05.867" endtime="20200923 12:47:07.960"></status>
+</kw>
+<status status="PASS" starttime="20200923 12:47:05.866" endtime="20200923 12:47:07.961"></status>
+</kw>
+<status status="FAIL" starttime="20200923 12:46:47.964" endtime="20200923 12:47:07.962"></status>
+</suite>
+<status status="FAIL" starttime="20200923 12:44:42.458" endtime="20200923 12:47:07.966"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="1">Critical Tests</stat>
+<stat pass="7" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="7" fail="1" id="s1" name="TestCases">TestCases</stat>
+<stat pass="4" fail="0" id="s1-s1" name="Login allInvalid">TestCases.Login allInvalid</stat>
+<stat pass="3" fail="0" id="s1-s2" name="Login allValid">TestCases.Login allValid</stat>
+<stat pass="0" fail="1" id="s1-s3" name="Test1">TestCases.Test1</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200923 12:46:47.987" level="ERROR">Calling method '_start_suite' of listener 'DataDriver' failed: ImportError: Requirements (pandas, numpy) for XLS support are not installed.
+    Use 'pip install -U robotframework-datadriver[XLS]' to install XLS support.</msg>
+</errors>
+</robot>
